@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="Calcular">
+<head>
+    <title>Peso Ideal</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<h1>Peso Ideal</h1>
+<body>
+    <div ng-controller="CalcularController">
+        Altura:<input type="text" ng-change="onChangeValue()" ng-model="altura"></br>
+        Edad:<input type="text" ng-change="onChangeValue()" ng-model="edad"></br>
+
+        Sexo:</br><input type="radio" name="somethign" value="Masculino"ng-model="sexo" >Masculino</br>
+            <input type="radio" name="somethign" value="Femenino"ng-model="sexo" >Femenino</br>
+
+
+        <p5>Tu peso ideal es:<p5><div>{{result}}</div>
+        
+        <button class="btn" type="button" ng-click="onClickCalcular()">resultado</button>
+    </div>
+
+    <!-- Dependencies -->
+    <script type="text/javascript" src="js/angular.js"></script>
+
+    <!-- App -->
+    <script type="text/javascript" src="js/Calcular.js"></script>
+
+</body>
+</html>
